@@ -1,0 +1,53 @@
+{
+  "features": {
+    "user_id": {
+      "type": "meta",
+      "dtype": "int",
+      "source": "user"
+    },
+
+    "likes_level": {
+      "type": "categorical",
+      "vocab_size": 11,
+      "dtype": "int",
+      "source": "user"
+    },
+
+    "views_level": {
+      "type": "categorical",
+      "vocab_size": 11,
+      "dtype": "int",
+      "source": "user"
+    },
+
+    "item_seq": {
+      "type": "sequence_meta",
+      "dtype": "int",
+      "source": "user"
+    },
+
+    "item_id": {
+      "type": "categorical",
+      "vocab_size": 91718,
+      "dtype": "int",
+      "source": "item"
+    },
+
+    "item_tags": {
+      "type": "sequence",
+      "vocab_size": 11740,
+      "max_len": 5,
+      "dtype": "int",
+      "source": "item"
+    },
+
+    "item_emb_d128": {
+      "type": "embedding",
+      "embedding_dim": 128,
+      "dtype": "float",
+      "source": "item"
+    }
+  },
+
+  "labels": ["label"]
+}
