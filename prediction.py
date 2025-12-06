@@ -5,7 +5,7 @@ import pandas as pd
 from tqdm import tqdm
 import sys
 from DataLoading import MMCTRDataset, MMCTRCollator
-from model import create_complete_model_from_dataset 
+from model import createModel
 from torch.utils.data import DataLoader
 sys.path.append('.')
 
@@ -21,7 +21,7 @@ def load_trained_model(checkpoint_path, dataset, device=None, weight_only=False)
     if device is None:
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     
-    model = create_complete_model_from_dataset(dataset, device=device)
+    model = createModel(dataset, device=device)
     
     checkpoint = torch.load(checkpoint_path, map_location=device, weights_only=False)
     model.load_state_dict(checkpoint['model_state_dict'])
