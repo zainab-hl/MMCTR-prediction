@@ -1,7 +1,7 @@
 ## References
 
 This project is built upon [1st Place Solution of WWW 2025 EReL@MIR Workshop
-Multimodal CTR Prediction Challenge](https://arxiv.org/pdf/2505.03543) with all components were reimplemented from scratch, and small yet influential adjustments, including changes to embedding dimensions and modifications in how certain inputs are handled and integrated into the model.
+Multimodal CTR Prediction Challenge](https://arxiv.org/pdf/2505.03543) with all components  reimplemented from scratch, and small yet influential adjustments, including changes to embedding dimensions and modifications in how certain inputs are handled and integrated into the model.
 
 ## Overall Architecture
 
