@@ -84,10 +84,10 @@ The model is trained using binary cross-entropy loss.
 
 ## Results & Discussion
 
-The proposed model achieves a ROC-AUC score of 0.8674 on the test set.
+The proposed model achieves a ROC-AUC score of 0.9268 on the test set.
 While this performance does not fully match the original winning solution, it demonstrates that the reimplemented architecture is able to effectively capture multimodal, sequential, and feature interaction signals.
 
-Notably, this performance was reached after only 9 training epochs, indicating fast convergence and stable optimization.
+Notably, this performance was reached after only 5 training epochs, indicating fast convergence and stable optimization.
 Due to **time constraints and limited computational resources**, further hyperparameter tuning and extended experimentation (e.g., deeper architectures, alternative embedding sizes, or longer training schedules) were not feasible.
 
 We believe that additional tuning and scaling would likely lead to further performance improvements.
