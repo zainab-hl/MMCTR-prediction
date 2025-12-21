@@ -92,4 +92,4 @@ Due to **time constraints and limited computational resources**, further hyperpa
 
 We believe that additional tuning and scaling would likely lead to further performance improvements.
 
-![result](media/results.png)
+![result](media/result.png)
