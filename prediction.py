@@ -69,7 +69,7 @@ def predict_test_set(model, test_dataset, batch_size=128, device=None):
     
     return np.array(all_predictions), np.array(all_ids)
 
-### this function must be changed to be adapted to the required submission format .
+### ######this function must be changed to be adapted to the required submission format .
 def create_submission_file(test_df, predictions, output_path="submission.csv"):
     """Create submission file in required format."""
     submission_df = test_df.select(['ID']).to_pandas()
@@ -85,7 +85,7 @@ def create_submission_file(test_df, predictions, output_path="submission.csv"):
     return submission_df
 
 if __name__ == "__main__":
-    # Paths - UPDATE THESE
+    
     TEST_PATH = "test.parquet"
     ITEM_INFO_PATH = "item_info.parquet"
     CHECKPOINT_PATH = "best_model.pth"  ## the saved model after training
