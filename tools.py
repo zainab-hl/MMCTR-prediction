@@ -18,7 +18,7 @@ class CTRPredictionLayer(nn.Module):
         self.mlp = nn.Sequential(
             nn.Linear(input_dim, hidden_dims[0]),
             nn.ReLU(),
-            #nn.Dropout(dropout_rate), ### paper did not use dropout, but we can use it if needed
+            #nn.Dropout(dropout_rate),
             nn.Linear(hidden_dims[0], hidden_dims[1]),
             nn.ReLU(),
             #nn.Dropout(dropout_rate),
@@ -75,7 +75,7 @@ class DCNv2FeatureInteraction(nn.Module):
         self,
         input_dim,                  # D = D_t + D_s + D_sqo
         num_cross_layers=3,
-        deep_hidden_dims=[1024, 512, 256], # Table 1
+        deep_hidden_dims=[1024, 512, 256], 
         deep_output_dim=256,        # d_o dimension
         dropout_rate=0.2
     ):
@@ -194,7 +194,10 @@ class ItemEmbeddingLayer(nn.Module):
         # concat final
         final = torch.cat([id_vec, tag_flat, frozen_vec], dim=-1)
         return final
+
+
 #### sequential feature learning module: for outputing the user vector
+
 class SequentialFeatureLearning(nn.Module):
     """
     Implements Section 2.2.2 with corrections:
@@ -277,8 +280,8 @@ class SequentialFeatureLearning(nn.Module):
         else:
             short_term = torch.zeros(B, self.k * self.dt, device=device, dtype=S.dtype)
 
-        # 8) Long-term: masked max-pooling over time.
-        # For masked positions set to a very small value before max.
+        # Long-term: masked max-pooling over time.
+        # For masked positions set to a very small value before max. idk why
         neg_inf = torch.tensor(-1e9, device=device, dtype=S.dtype)
         # expand padding mask to [B, N, 1] for broadcasting
         pm_expand = padding_mask.unsqueeze(-1)  # True where padding
