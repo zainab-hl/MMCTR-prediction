@@ -90,6 +90,5 @@ While this performance does not fully match the original winning solution, it de
 Notably, this performance was reached after only 5 training epochs, indicating fast convergence and stable optimization.
 Due to **time constraints and limited computational resources**, further hyperparameter tuning and extended experimentation (e.g., deeper architectures, alternative embedding sizes, or longer training schedules) were not feasible.
 
-We believe that additional tuning and scaling would likely lead to further performance improvements.
 
 ![result](media/result.png)
